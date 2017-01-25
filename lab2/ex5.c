@@ -6,7 +6,7 @@
  */
 int is_prime(int num) {
     // TODO: Figure out why this breaks for large numbers
-    for (int i = 2; i * i <= num; i++) {
+    for (long i = 2; i * i <= num; i++) {
         if (num % i == 0) {
             return i;
         }
