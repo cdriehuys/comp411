@@ -7,7 +7,7 @@
 
 main()
 {
-  char text[MAX], reversed[MAX], c;
+  char text[MAX];
   int i, length, palindrome;
 
   puts("Type some text (then ENTER):");
@@ -17,29 +17,19 @@ main()
   fgets(text, MAX, stdin);
   length = strlen(text) - 1;
 
-  /* Analyse contents of text[]: */
+  printf("Your input in reverse is:\n");
 
-  for (i = 0; i < MAX; i++)
-  {
-    c = text[i];
-
-    /* Copy current char into reversed array */
-    reversed[length - i - 1] = c;
-
-    /* Break if we've reached the end of the string */
-    if (c == '\n')
-      break;
-  }
-
-  /* Palindrome check */
+  /* Print and check for palindrome */
   palindrome = 1;
-  for (i = 0; i < length; i++) {
+  for (i = length - 1; i >= 0; i--) {
     if (text[i] != text[length - i - 1]) {
       palindrome = 0;
     }
+
+    printf("%c", text[i]);
   }
 
-  printf("Your input in reverse is:\n%s\n", reversed);
+  printf("\n");
 
   if (palindrome) {
     printf("Found a palindrome!\n");
