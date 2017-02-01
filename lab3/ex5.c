@@ -13,7 +13,7 @@ sorting is complete. */
 
 main()
 {
-  int i, sorted, swaps = 0;
+  int i, sorted, swaps = 0, iterations = 0;
   float x[VALS], temp;
 
   /* Input values: */
@@ -26,8 +26,6 @@ main()
 
   /* Bubble sort: */
 
-  int iterations = 0;
-
   do {
        for (i = 1, sorted = 1; i < VALS; i++)
        {
@@ -39,9 +37,9 @@ main()
            x[i] = temp;
            swaps++;
          }
-
-         iterations++;
        }
+
+       iterations++;
      } while (!sorted);
 
   /* Output sorted values: */

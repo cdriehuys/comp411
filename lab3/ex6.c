@@ -14,7 +14,7 @@ int main() {
     int n, k;
 
     do {
-        printf("Enter two integers (for n and k) separated by a space:\n");
+        printf("Enter two integers (for n and k) separated by space:\n");
         scanf("%d%d", &n, &k);
 
         if (n == 1 && k == 1) {
